@@ -15,10 +15,12 @@
             <h1>{{ $user->name }}</h1>
 
                 <form onsubmit="return confirm('Do you really want to add thi user?');" method="POST" action="{{ url('update_user/'. $user->id ) }}">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="password" class="form-control" placeholder="Enter Password" value="720DF6C2482218518FA20FDC52D4DED7ECC043AB" name="password" autocomplete="off" required>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="text" class="form-control" placeholder="Enter Password" value="720DF6C2482218518FA20FDC52D4DED7ECC043AB" name="password" autocomplete="off" required>
                 </br>
-                <input type="text" class="form-control" placeholder="Enter Comment" value="{{  $user->comments  }}" name="comments" autocomplete="off" required>
+                <textarea name="old_comments" disabled>{{ nl2br($user->comments) }}</textarea>
+            </br>
+                <input type="text" class="form-control" placeholder="Enter Comment to Append" name="comments" autocomplete="off" required>
             </header>
             @if ($errors->any())
             <div class="alert alert-danger">
