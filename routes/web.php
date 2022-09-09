@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/{user}',[UserController::class,'index']);
+Route::get('user/{user}',[App\Http\Controllers\UserController::class,'index']);
+
+Route::post('update_user/{user}',[App\Http\Controllers\UserController::class,'update_user'])->name('update_user');

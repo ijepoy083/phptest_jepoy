@@ -23,11 +23,13 @@ class UsersSeeder extends Seeder
             'id' => 1,
             'name' => 'John Smith',
             'comments' => 'Director',
+            'password' => '720DF6C2482218518FA20FDC52D4DED7ECC043AB',
         ],
         [
             'id' => 2,
             'name' => 'Jane Doe',
             'comments' => 'Secretary',
+            'password' => '720DF6C2482218518FA20FDC52D4DED7ECC043AB',
         ]
     ];
 
